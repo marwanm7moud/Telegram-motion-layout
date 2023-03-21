@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#151E27"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity"
+    android:id="@+id/dd"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="000dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/the_chance"
+            />
+
+        <View
+            android:id="@+id/avatar_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient" />
+    </androidx.cardview.widget.CardView>
+    <View
+        android:id="@+id/app_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        android:background="#212D3B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/back"
+        android:elevation="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintEnd_toStartOf="@+id/more"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/more"
+        android:elevation="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/baseline_more_vert_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:elevation="8dp"
+        android:layout_marginTop="56dp"
+        android:text="The Chance"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/text2"
+        android:elevation="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="815 subscribers"
+        android:textColor="#8B97A3"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/app_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/text1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        >
+        <LinearLayout
+            android:id="@+id/contentg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#151E27"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="#1D2733"
+                android:orientation="vertical"
+                android:padding="16dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="info"
+                    android:textSize="16sp"
+                    android:textColor="#79C4FD" />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="t.me/thechance101"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:drawableEndCompat="@drawable/baseline_qr_code_24" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Invite Link"
+                    android:textSize="12sp"
+                    android:textColor="#7D8B98" />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Notifications"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="On"
+                        android:textSize="12sp"
+                        android:textColor="#7D8B98" />
+                </LinearLayout>
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1D2733"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="9"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Media"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="#79C4FD"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Files"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="#7D8B98"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Links"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="#7D8B98"
+                        />
+
+
+                </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="9"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+
+
+
+
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+
+
+
+
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="128dp"
+                            android:scaleType="fitCenter"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/the_chance"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
